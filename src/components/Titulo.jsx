@@ -1,10 +1,9 @@
-
-const Titulo = () => {
-    return (
-      <section>
-        <h1 className="text-center"> Hola Gente</h1>
-      </section>
-    );
+const Titulo = ({ nuevoTitulo }) => {
+  return (
+    <>
+      <h1 className="text-center"> {nuevoTitulo}</h1>
+    </>
+  );
 };
 
 export default Titulo;
