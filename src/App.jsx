@@ -1,7 +1,12 @@
 import "./App.css";
+import Titulo from "./components/Titulo";
 
 function App() {
-  return <div></div>;
+  return(
+    <>
+    <Titulo></Titulo>
+    </>
+  );
 }
 
 export default App;
