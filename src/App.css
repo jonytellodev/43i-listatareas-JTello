@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+  background-image: linear-gradient(to right, #192d2d 0%, #330867 100%);
+}
+
+
+
+.customHr{
+    border-width: 5px;
+    border-color: rgb(255, 255, 255);
+}
+
+.tituloCustom{
+    font-family: Roboto;
+    font-weight: 300;
+    color: white;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainPage{
+    flex-grow: 1;
+}
+
+footer {
+  margin-top: auto;
+}
