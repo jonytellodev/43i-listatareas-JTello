@@ -6,9 +6,17 @@ const FormularioTareas = () => {
   const [tarea,setTarea] = useState('');
   const [grupoTareas,setGrupoTareas] = useState([]);
   
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    //guardar la tarea en el array grupoTareas
+    setGrupoTareas([...grupoTareas, tarea]);
+    //limpiar value del input
+    setTarea('');
+  }
+
     return (
       <>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <FormGroup className="mb-3 d-flex" controlId="tarea">
             <FormControl 
             type="text"
@@ -16,7 +24,10 @@ const FormularioTareas = () => {
             value={tarea}
             onChange={(e)=> setTarea(e.target.value)}
             className='me-2' />
-            <Button variant="primary">Agregar</Button>
+            <Button
+            variant="primary"
+            type="submit"
+            >Agregar</Button>
           </FormGroup>
         </Form>
         <ListaTareas></ListaTareas>
