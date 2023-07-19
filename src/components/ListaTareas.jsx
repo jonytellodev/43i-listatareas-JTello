@@ -6,7 +6,7 @@ const ListaTareas = ({propsGrupoTareas}) => {
   return (
     <ListGroup>
       {
-        propsGrupoTareas.map((tarea, index)=><ItemTarea key={index}></ItemTarea>)        
+        propsGrupoTareas.map((tarea, index)=><ItemTarea key={index} textoTarea={tarea}></ItemTarea>)        
       }
       
     </ListGroup>
