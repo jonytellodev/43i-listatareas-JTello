@@ -1,6 +1,7 @@
 import {Form, Button, FormGroup, FormControl} from "react-bootstrap";
 import ListaTareas from './ListaTareas';
 import {useState} from 'react'
+import ItemTarea from "./ItemTarea";
 
 const FormularioTareas = () => {
   const [tarea,setTarea] = useState('');
@@ -13,6 +14,12 @@ const FormularioTareas = () => {
     //limpiar value del input
     setTarea('');
   }
+
+// crear funcion para borrar tareas
+const borrarTarea = (tareaBorrar)=>{
+  let filtroGrupotareas = grupoTareas.filter((itemTarea)=> itemTarea !== tareaBorrar);
+  setGrupoTareas(filtroGrupotareas);
+}
 
     return (
       <>
@@ -30,7 +37,7 @@ const FormularioTareas = () => {
             >Agregar</Button>
           </FormGroup>
         </Form>
-        <ListaTareas propsGrupoTareas={grupoTareas}></ListaTareas>
+        <ListaTareas propsGrupoTareas={grupoTareas} borrarTarea={borrarTarea}></ListaTareas>
       </>
     );
 };
